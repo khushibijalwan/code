@@ -1,0 +1,28 @@
+public class RemoveVowels {
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        String result = removeVowels(input);
+        System.out.println("Original String: " + input);
+        System.out.println("String without vowels: " + result);
+    }
+
+    public static String removeVowels(String input) {
+        StringBuilder result = new StringBuilder();
+        for (char c : input.toCharArray()) {
+            if (!isVowel(c)) {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
+    public static boolean isVowel(char c) {
+        char lowerCase = Character.toLowerCase(c);
+        return lowerCase == 'a' || lowerCase == 'e' || lowerCase == 'i' || lowerCase == 'o' || lowerCase == 'u';
+    }
+}
+
+
+
+
+
